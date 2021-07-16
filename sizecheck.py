@@ -27,8 +27,9 @@ count=0
 for i in allfile:
 	count+=1
 	file_size = os.path.getsize(i)
-	if file_size<1048576 and file_size>2048:
-		print('File path',i,"File Size is :", file_size, "bytes")
+	if file_size<=1048576 and file_size>2048:
+		print('File path',i,"File Size is :", "%.2f" % (file_size/1024) , "kb")
+
 
 print(count)
 while TRUE:
